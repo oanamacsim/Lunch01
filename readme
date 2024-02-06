@@ -1,0 +1,14 @@
+Compilare server:
+g++ server.cpp -o server
+
+Compilare client
+g++ client.cpp -o client
+
+Rulare server:
+./server
+
+Rulare client
+./client 127.0.0.1 2908
+
+
+Fie un server TCP concurent la care se pot conecta maxim N clienti. Din T in T secunde (T < 120) serverul va primi un mesaj de la o parte din clienti ce va identifica printr-un numar un fel de mancare (de la 1 la 5) ales random de respectivul client. Serverul va contoriza cererile iar pentru felul cel mai preferat (avand cele mai multe cereri) va trimite la clientii solicitanti ca raspuns: "Masa e servita". Celorlalti clienti (care au ales alt fel), le va raspunde cu "Indisponibil". Un client ce a fost servit cu pranzul va afisa un mesaj "Satul!" si isi va incheia executia. Un client refuzat va mai incerca o cerere aleasa tot random dupa un interval ales de asemeni aleator (pana in 60 de secunde). La trei cereri refuzate, un client va afisa "Schimb cantina! Aici mor de foame!" si isi va incheia executia.
